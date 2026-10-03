@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Command Center Live Telemetry",
+    "pass": true,
+    "detail": "Health score: 81, 5 depts tracked"
+  },
+  {
+    "name": "Emergency Triage Acuity Update",
+    "pass": true,
+    "detail": "Updated patient #309 to 'critical' priority"
+  },
+  {
+    "name": "Smart Bed Match Engine",
+    "pass": true,
+    "detail": "Ranked candidates returned: Engine response valid"
+  },
+  {
+    "name": "Resource Inventory & Emergency Stock Tracking",
+    "pass": true,
+    "detail": "Retrieved 5 critical equipment types (ventilators, oxygen, telemetry monitors)"
+  },
+  {
+    "name": "AI Optimization Apply Action",
+    "pass": true,
+    "detail": "Applied optimization recommendation #1"
+  },
+  {
+    "name": "Crisis Warning Radar",
+    "pass": true,
+    "detail": "Retrieved 3 predicted operational risks"
+  },
+  {
+    "name": "AI Copilot Query & Evidence Generator",
+    "pass": true,
+    "detail": "Answer: ICU risk is elevated. Current occupancy is 90.0%, which exceeds the 85% threshol... Evidence cards: 3"
+  },
+  {
+    "name": "Digital Twin Deterministic Simulation Engine",
+    "pass": true,
+    "detail": "Before occupancy: 80.5% -> After: 86.6%"
+  },
+  {
+    "name": "Stress Scenario Sandbox & 1-Click State Reset",
+    "pass": true,
+    "detail": "Triggered ICU Surge and successfully executed State Reset"
+  },
+  {
+    "name": "HIPAA Audit Trail & Mutation Logging",
+    "pass": true,
+    "detail": "Verified 11 tamper-evident audit log entries"
+  }
+]

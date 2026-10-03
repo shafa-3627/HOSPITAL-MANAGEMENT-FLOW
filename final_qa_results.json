@@ -1,0 +1,122 @@
+[
+  {
+    "module": "Login",
+    "route": "/login",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Command Center",
+    "route": "/app/command-center",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Patient Flow",
+    "route": "/app/patient-flow",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Emergency Triage",
+    "route": "/app/emergency",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Bed Management",
+    "route": "/app/beds",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Crisis Warning Radar",
+    "route": "/app/crisis",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "AI Copilot",
+    "route": "/app/copilot",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "AI Forecast",
+    "route": "/app/forecast",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "AI Optimization",
+    "route": "/app/optimization",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Explainable AI / SHAP",
+    "route": "/app/explainability",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Bottleneck Radar",
+    "route": "/app/bottlenecks",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Staffing & Float Pool",
+    "route": "/app/staffing",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Emergency Auto-Orders",
+    "route": "/app/resources",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Digital Twin Simulation",
+    "route": "/app/digital-twin",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Audit Trail",
+    "route": "/app/audit",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "FHIR & Integration Hub",
+    "route": "/app/integrations",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "AI Model Lab",
+    "route": "/app/model-lab",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Hospital Analytics",
+    "route": "/app/analytics",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Security & Safety",
+    "route": "/app/security",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "module": "Settings",
+    "route": "/app/settings",
+    "passed": true,
+    "errors": []
+  }
+]

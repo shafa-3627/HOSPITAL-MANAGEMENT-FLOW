@@ -1,0 +1,398 @@
+[
+  {
+    "name": "Auth Me / Status",
+    "method": "GET",
+    "path": "/api/auth/me",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'username': 'admin', 'email': 'admin@yodha.com', 'full_name': 'Hospital Administrator', 'role': 'admin', 'is_active': True, 'id': 1, 'last_login': No"
+  },
+  {
+    "name": "Command Center Dashboard Data",
+    "method": "GET",
+    "path": "/api/dashboard",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'health_score': 81, 'status': 'STABLE', 'total_patients': 311, 'available_beds': 72, 'ed_waiting': 11, 'icu_occupancy': 90.0, 'staff_available': 50, "
+  },
+  {
+    "name": "Dashboard Capacity Details",
+    "method": "GET",
+    "path": "/api/dashboard/capacity",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'name': 'Apex General Hospital - Emergency Department', 'type': 'ED', 'total': 60, 'occupied': 51, 'available': 9, 'reserved': 2, 'utilizat"
+  },
+  {
+    "name": "Dashboard Forecast Summary",
+    "method": "GET",
+    "path": "/api/dashboard/forecast-summary",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'department_id': 2, 'metric': 'occupancy', 'horizon_hours': 4, 'predicted_value': 91.2, 'confidence': 0.88, 'lower_bound': 85.8, 'upper_bou"
+  },
+  {
+    "name": "Patients List",
+    "method": "GET",
+    "path": "/api/patients",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'patient_code': 'P-1309', 'age': 47, 'gender': 'Female', 'priority': 'medium', 'department_id': 1, 'bed_id': None, 'arrival_time': '2026-10-01T11:58"
+  },
+  {
+    "name": "Patient Flow Stages",
+    "method": "GET",
+    "path": "/api/patient-flow",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'stages': {'ambulance': {'stage': 'ambulance', 'patient_count': 0, 'avg_wait_minutes': 30, 'bottleneck': False}, 'registration': {'stage': 'registrat"
+  },
+  {
+    "name": "Single Patient Details",
+    "method": "GET",
+    "path": "/api/patients/309",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'patient_code': 'P-1309', 'age': 47, 'gender': 'Female', 'priority': 'medium', 'department_id': 1, 'bed_id': None, 'arrival_time': '2026-10-01T11:58:"
+  },
+  {
+    "name": "Departments List",
+    "method": "GET",
+    "path": "/api/departments",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'hospital_id': 1, 'name': 'Apex General Hospital - Emergency Department', 'type': 'ED', 'total_beds': 60, 'occupied_beds': 51, 'available_beds': 9, "
+  },
+  {
+    "name": "Beds List",
+    "method": "GET",
+    "path": "/api/beds",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'department_id': 1, 'bed_number': 'ED-001', 'ward': 'ED', 'type': 'isolation', 'status': 'occupied', 'patient_id': 306, 'equipment': 'Standard Monit"
+  },
+  {
+    "name": "Smart Bed Matching",
+    "method": "POST",
+    "path": "/api/beds/match",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'recommended_department': 'Apex General Hospital - General Ward', 'department_type': 'General', 'matched_beds': [{'id': 266, 'bed_number': 'Gen-166',"
+  },
+  {
+    "name": "Forecast Prediction",
+    "method": "GET",
+    "path": "/api/forecast",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'department_id': 2, 'metric': 'occupancy', 'horizon_hours': 4, 'predicted_value': 91.2, 'confidence': 0.88, 'lower_bound': 85.8, 'upper_bou"
+  },
+  {
+    "name": "Forecast Comparison",
+    "method": "GET",
+    "path": "/api/forecast/comparison",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'model_name': 'YODHA XGBoost Flow Predictor v2', 'model_type': 'Gradient Boosting', 'mae': 1.42, 'rmse': 2.15, 'mape': 0.032, 'r2_score': 0"
+  },
+  {
+    "name": "Explainable AI / SHAP Contributions",
+    "method": "GET",
+    "path": "/api/explainability",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'model_name': 'GradientBoostingRegressor (Ensemble)', 'prediction_target': 'ICU 6-Hour Occupancy Surge', 'predicted_value': 94.5, 'base_value': 72.0,"
+  },
+  {
+    "name": "Optimization Recommendations",
+    "method": "GET",
+    "path": "/api/optimization",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'title': 'Prepare 3 ICU Swing Beds', 'description': 'Convert step-down recovery beds for ICU spillover capacity.', 'action_type': 'bed_prep"
+  },
+  {
+    "name": "Crisis Radar Warnings",
+    "method": "GET",
+    "path": "/api/crisis",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'title': 'Predicted ICU Capacity Crisis', 'description': 'ICU occupancy predicted to reach 97% in 6 hours due to high ED admission flow.', "
+  },
+  {
+    "name": "AI Copilot Query (ICU)",
+    "method": "POST",
+    "path": "/api/copilot/ask",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'answer': 'ICU risk is elevated. Current occupancy is 90.0%, which exceeds the 85% threshold. Predicted admissions from ED may further increase press"
+  },
+  {
+    "name": "AI Copilot Query (ED Waiting)",
+    "method": "POST",
+    "path": "/api/copilot/ask",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'answer': 'There are currently 11 patients waiting in the ED with an average wait time of 67 minutes. This is within normal operational range.', 'evi"
+  },
+  {
+    "name": "Bottlenecks Detection",
+    "method": "GET",
+    "path": "/api/bottlenecks",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 'b1', 'rank': 1, 'transition': 'Emergency Department \u2192 ICU Inpatient Admission', 'severity': 'critical', 'current_delay_mins': 58, 'predicted_"
+  },
+  {
+    "name": "Staff List",
+    "method": "GET",
+    "path": "/api/staff",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'staff_code': 'STF-1-01', 'name': 'Staff Member ED 1', 'role': 'doctor', 'department_id': 1, 'shift': 'night', 'status': 'on_duty', 'workload_index'"
+  },
+  {
+    "name": "Staff Workload Analysis",
+    "method": "GET",
+    "path": "/api/staff/workload",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'departments': [{'department_id': 1, 'department_name': 'Apex General Hospital - Emergency Department', 'staff_count': 15, 'avg_workload': 75.9}, {'d"
+  },
+  {
+    "name": "Staff Recommendations",
+    "method": "GET",
+    "path": "/api/staff/recommendations",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "Resource Inventory & Auto-Orders",
+    "method": "GET",
+    "path": "/api/resources",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'name': 'Mechanical Ventilators', 'type': 'ventilator', 'department_id': 2, 'total': 25, 'available': 4, 'in_use': 21, 'maintenance': 0, 'p"
+  },
+  {
+    "name": "Resource Demand Forecast",
+    "method": "GET",
+    "path": "/api/resources/forecast",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'department_id': 2, 'metric': 'occupancy', 'horizon_hours': 4, 'predicted_value': 91.2, 'created_at': '2026-10-01T12:24:30.910137'}, {'id':"
+  },
+  {
+    "name": "Digital Twin Presets",
+    "method": "GET",
+    "path": "/api/simulation/presets",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 'normal', 'name': 'Normal Day', 'description': 'Standard operational parameters'}, {'id': 'icu_surge', 'name': 'ICU Surge', 'description': 'Su"
+  },
+  {
+    "name": "Digital Twin History",
+    "method": "GET",
+    "path": "/api/simulation/history",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 5, 'scenario_type': 'icu_surge', 'before_state': {'total_occupancy': 80.5, 'waiting_patients': 11, 'avg_workload': 92.0, 'crisis_risk': 'High'"
+  },
+  {
+    "name": "Digital Twin Run Simulation",
+    "method": "POST",
+    "path": "/api/simulation/run",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'before': {'total_occupancy': 80.5, 'waiting_patients': 11, 'avg_workload': 92.0, 'crisis_risk': 'High', 'departments': {'ED': {'occupancy': 85.0, 'o"
+  },
+  {
+    "name": "Anomaly Detection",
+    "method": "GET",
+    "path": "/api/anomalies",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "Live Event Stream",
+    "method": "GET",
+    "path": "/api/events",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "FHIR & EHR Integration Status",
+    "method": "GET",
+    "path": "/api/fhir/status",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'name': 'HL7 FHIR R4 Engine', 'system_name': 'HL7 FHIR R4 Engine', 'type': 'fhir', 'protocol': 'FHIR R4', 'status': 'Connected', 'latency_m"
+  },
+  {
+    "name": "AI Model Info",
+    "method": "GET",
+    "path": "/api/model/info",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "AI Model Evaluations",
+    "method": "GET",
+    "path": "/api/model/evaluations",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "AI Model Run Evaluation",
+    "method": "POST",
+    "path": "/api/model/evaluate",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "Hospital Analytics (Daily)",
+    "method": "GET",
+    "path": "/api/analytics",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'period': 'daily', 'metrics': {'total_patients': 311, 'ed_waiting': 11, 'average_occupancy': 80.7, 'active_alerts': 0}, 'trends': {'occupancy': [72.7"
+  },
+  {
+    "name": "Generate Operational Reports",
+    "method": "GET",
+    "path": "/api/reports/generate",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "Security Center Status",
+    "method": "GET",
+    "path": "/api/security",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "AI Safety & Governance Metrics",
+    "method": "GET",
+    "path": "/api/safety",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "Audit Trail Logs",
+    "method": "GET",
+    "path": "/api/audit",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 3, 'user_id': None, 'username': 'Clinical Admin', 'role': 'admin', 'action': 'optimization_rejected', 'entity_type': 'Recommendation', 'entity"
+  },
+  {
+    "name": "Hospital Network Multi-Facility",
+    "method": "GET",
+    "path": "/api/network/hospitals",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "[{'id': 1, 'name': 'Apex General Hospital', 'code': 'H-001', 'address': '100 Healthcare Blvd', 'total_beds': 450, 'active': True, 'lat': 10.7904, 'lng"
+  },
+  {
+    "name": "System Settings",
+    "method": "GET",
+    "path": "/api/settings",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "Empty"
+  },
+  {
+    "name": "Stress Scenario: ICU Surge",
+    "method": "POST",
+    "path": "/api/scenarios/icu-surge",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'status': 'triggered', 'scenario': 'icu-surge', 'message': 'ICU surge scenario activated.'}"
+  },
+  {
+    "name": "Stress Scenario: Mass Casualty",
+    "method": "POST",
+    "path": "/api/scenarios/mass-casualty",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'status': 'triggered', 'scenario': 'mass-casualty', 'message': 'Mass casualty scenario activated.'}"
+  },
+  {
+    "name": "Stress Scenario: Staff Shortage",
+    "method": "POST",
+    "path": "/api/scenarios/staff-shortage",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'status': 'triggered', 'scenario': 'staff-shortage', 'message': 'Staff shortage scenario activated.'}"
+  },
+  {
+    "name": "Stress Scenario: Weekend Surge",
+    "method": "POST",
+    "path": "/api/scenarios/weekend-surge",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'status': 'triggered', 'scenario': 'weekend-surge', 'message': 'Weekend surge scenario activated.'}"
+  },
+  {
+    "name": "Scenario Reset State",
+    "method": "POST",
+    "path": "/api/scenarios/reset",
+    "status_code": 200,
+    "expected_status": 200,
+    "pass": true,
+    "data_summary": "{'status': 'reset', 'message': 'All scenario alerts resolved and baseline state restored.'}"
+  }
+]
